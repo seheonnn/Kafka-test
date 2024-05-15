@@ -1,5 +1,6 @@
 package com.example.kafkatest;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,8 +13,8 @@ public class TestController {
 
 	private final TestService kafkaTestService;
 
-	// @GetMapping("/test")
-	// public void testKafka() {
-	// 	kafkaTestService.kafkaProducerTest();
-	// }
+	@GetMapping("/test")
+	public void testKafka() {
+		kafkaTestService.kafkaProducerTest();
+	}
 }
